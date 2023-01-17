@@ -36,6 +36,13 @@
   .desk_display {
     display: none;
   }
+  .card_one {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-areas: "item2" "item1";
+  }
+  .card_type_one {
+    padding: 1.5rem;
+  }
 }
 @media (min-width: 700px) {
   .mob_display {
@@ -49,6 +56,7 @@
   }
   .card_one {
     grid-template-columns: repeat(2, 50%);
+    grid-template-areas: "item1 item2";
   }
   .card_two {
     grid-template-columns: repeat(2, 50%);
@@ -63,6 +71,9 @@
   .head_title {
     bottom: 80%;
     left: 16%;
+  }
+  .card_type_one {
+    padding: 1.5rem;
   }
 }
 @media (min-width: 800px) {
@@ -80,7 +91,10 @@
 @media (min-width: 1100px) {
   .head_title {
     bottom: 80%;
-    left: 30%;
+    left: 33%;
+  }
+  .card_type_one {
+    padding: 5rem;
   }
 }
 body {
@@ -165,12 +179,19 @@ header {
   display: grid;
 }
 
+.card_grid_one {
+  grid-area: item1;
+}
+
+.card_grid_two {
+  grid-area: item2;
+}
+
 .test {
   display: none;
 }
 
 .card_type_one {
-  padding: 1.5rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -208,7 +229,10 @@ header {
   bottom: 10%;
 }
 .card_type_two div h2 {
-  padding: 2rem;
+  padding: 1rem;
+}
+.card_type_two div p {
+  padding: 1rem;
 }
 
 .card_t2_context {
